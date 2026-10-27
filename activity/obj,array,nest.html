@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Object Array Nested</title>
+</head>
+<body>
+
+    <h2>JSON Object, Array and Nested JSON</h2>
+    <div id="output"></div>
+
+    <script>
+        let student = {
+            "name": "Amrutha",
+            "age": 20,
+            "course": "AIML",
+            "subjects": ["Java", "Python", "HTML"],
+            "address": {
+                "city": "Chennai",
+                "state": "Tamil Nadu"
+            }
+        };
+
+        let result = "";
+
+        // JSON Object
+        result += "<h3>JSON Object</h3>";
+        result += "Name: " + student.name + "<br>";
+        result += "Age: " + student.age + "<br>";
+        result += "Course: " + student.course + "<br>";
+
+        // JSON Array
+        result += "<h3>JSON Array</h3>";
+        for (let i = 0; i < student.subjects.length; i++) {
+            result += student.subjects[i] + "<br>";
+        }
+
+        // Nested JSON
+        result += "<h3>Nested JSON</h3>";
+        result += "City: " + student.address.city + "<br>";
+        result += "State: " + student.address.state;
+
+        document.getElementById("output").innerHTML = result;
+    </script>
+
+</body>
+</html>
